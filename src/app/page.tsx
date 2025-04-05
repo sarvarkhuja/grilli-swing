@@ -1,28 +1,21 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import { asText } from "@prismicio/client";
-import { SliceZone } from "@prismicio/react";
+import { HeroSection } from "@/components/home/HeroSection";
+import { CuisineSection } from "@/components/home/CuisineSection";
+import { SpecialMenu } from "@/components/home/SpecialMenu";
+import { Features } from "@/components/home/Features";
+import { EventBooking } from "@/components/home/EventBooking";
+import { Testimonials } from "@/components/home/Testimonials";
+import { ChefSection } from "@/components/home/ChefSection";
 
-import { createClient } from "@/prismicio";
-import { components } from "@/slices";
-
-export async function generateMetadata(): Promise<Metadata> {
-  const client = createClient();
-  const page = await client.getByUID("page", "home").catch(() => notFound());
-
-  return {
-    title: asText(page.data.title),
-    description: page.data.meta_description,
-    openGraph: {
-      title: page.data.meta_title ?? undefined,
-      images: [{ url: page.data.meta_image.url ?? "" }],
-    },
-  };
-}
-
-export default async function Page() {
-  const client = createClient();
-  const page = await client.getByUID("page", "home").catch(() => notFound());
-
-  return <SliceZone slices={page.data.slices} components={components} />;
+export default function HomePage() {
+  return (
+    <>
+      <HeroSection />
+      <CuisineSection />
+      <SpecialMenu />
+      <Features />
+      <EventBooking />
+      <Testimonials />
+      <ChefSection />
+    </>
+  );
 }
