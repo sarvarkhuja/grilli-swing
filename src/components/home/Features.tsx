@@ -43,25 +43,25 @@ export function Features() {
       </div>
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <div className="grid grid-cols-2">
-          <div className="mt-16 flex justify-center">
-            <div className="relative w-full aspect-square">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="order-2 md:order-1 flex justify-center">
+            <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px]">
               <Image
-                src="https://cdn.prod.website-files.com/63d0c13bf294b9ad2ad7a1f0/63d9e7827c3b011cffea7b09_feature-image-01.jpg"
+                src="/Exterior.png"
                 alt="Feature Section"
                 fill
                 className="object-contain"
               />
             </div>
           </div>
-          <div className="mb-12 text-center">
+          <div className="order-1 md:order-2 mb-12 text-center md:text-left">
             <span className="inline-block text-[#ceb693] text-sm uppercase tracking-wide mb-2">
               QUALITY & BALANCE
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">
               An Extraordinary<br />Experience for all
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
               {features.map((feature, index) => (
                 <FeatureCard
                   key={index}
@@ -71,12 +71,7 @@ export function Features() {
               ))}
             </div>
           </div>
-
-
         </div>
-
-
-
       </div>
     </section>
   );

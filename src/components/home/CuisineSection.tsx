@@ -34,8 +34,8 @@ export function CuisineSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="mb-4 sm:mb-0">
                 <p className="text-gray-300 mb-2">Call for Reservation</p>
-                <a href="tel:+01234567891" className="text-[#ceb693] text-lg font-medium">
-                  +01234 567 891
+                <a href="tel:+358402587139" className="text-[#ceb693] text-lg font-medium">
+                  +358 40 2587139
                 </a>
               </div>
               <Button asChild className="bg-[#ceb693] hover:bg-[#d6c4a7] text-black px-6">
@@ -45,13 +45,14 @@ export function CuisineSection() {
           </div>
 
           <div className="w-full md:w-1/2">
-            <div className="relative mx-auto w-full max-w-md aspect-square">
+            <div className="relative mx-auto w-full">
               <Link href="/ecommerce-menu">
                 <Image
-                  src="https://cdn.prod.website-files.com/63d0c13bf294b9ad2ad7a1f0/63d9de67f1e5b982041702d6_about-image-01.png"
+                  src="/Interior.png"
                   alt="Traditional Cuisine"
-                  fill
-                  className="object-cover rounded-md"
+                  width={800}
+                  height={800}
+                  className="object-fit w-full rounded-md"
                 />
               </Link>
             </div>

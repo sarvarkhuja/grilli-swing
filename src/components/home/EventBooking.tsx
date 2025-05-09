@@ -59,7 +59,7 @@ export function EventBooking() {
             {/* This is left empty intentionally to match the original design */}
             <div className="relative w-full aspect-square">
               <Image
-                src="https://cdn.prod.website-files.com/63d0c13bf294b9ad2ad7a1f0/63d9e74ab6f71419e8521436_image-01.jpg"
+                src="/Food-1.png"
                 alt="Feature Section"
                 fill
                 className="object-contain"

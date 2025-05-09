@@ -44,39 +44,39 @@ export function Testimonials() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {testimonials.slice(currentSlide, currentSlide + 2 > testimonials.length ?
               testimonials.length : currentSlide + 2).map((testimonial, index) => (
-              <div key={testimonial.id} className="bg-[#091519]/80 p-6 rounded-lg relative">
-                <div className="mb-6">
-                  <p className="text-gray-300">
-                    {testimonial.comment}
-                  </p>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-full overflow-hidden">
-                    <Image
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      width={64}
-                      height={64}
-                      className="object-cover"
-                    />
+                <div key={testimonial.id} className="bg-[#091519]/80 p-6 rounded-lg relative">
+                  <div className="mb-6">
+                    <p className="text-gray-300">
+                      {testimonial.comment}
+                    </p>
                   </div>
-                  <div>
-                    <h4 className="font-bold">{testimonial.name}</h4>
-                    <p className="text-[#ceb693] text-sm">{testimonial.position}</p>
+                  <div className="flex items-center gap-4">
+                    <div className="w-16 h-16 rounded-full overflow-hidden">
+                      <Image
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        width={64}
+                        height={64}
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="font-bold">{testimonial.name}</h4>
+                      <p className="text-[#ceb693] text-sm">{testimonial.position}</p>
+                    </div>
+                  </div>
+                  <div className="absolute right-4 top-4 text-4xl text-gray-500 opacity-30 font-serif">
+                    " "
                   </div>
                 </div>
-                <div className="absolute right-4 top-4 text-4xl text-gray-500 opacity-30 font-serif">
-                  " "
-                </div>
-              </div>
-            ))}
+              ))}
           </div>
 
           <div className="flex justify-center mt-8 gap-2">
             <Button
               variant="outline"
               size="icon"
-              className="rounded-full border-gray-700 text-white hover:bg-[#ceb693] hover:text-black hover:border-[#ceb693]"
+              className="rounded-full border-gray-700 text-[#ceb693] hover:bg-[#ceb693] hover:text-black hover:border-[#ceb693]"
               onClick={goToPrevSlide}
             >
               <ChevronLeft className="h-4 w-4" />
@@ -84,16 +84,15 @@ export function Testimonials() {
             {testimonials.map((_, index) => (
               <button
                 key={index}
-                className={`w-2 h-2 rounded-full mx-1 ${
-                  index === currentSlide ? "bg-[#ceb693]" : "bg-gray-600"
-                }`}
+                className={`mt-4 w-2 h-2 rounded-full mx-1 ${index === currentSlide ? "bg-[#ceb693]" : "bg-gray-600"
+                  }`}
                 onClick={() => setCurrentSlide(index)}
               />
             ))}
             <Button
               variant="outline"
               size="icon"
-              className="rounded-full border-gray-700 text-white hover:bg-[#ceb693] hover:text-black hover:border-[#ceb693]"
+              className="rounded-full border-gray-700 text-[#ceb693] hover:bg-[#ceb693] hover:text-black hover:border-[#ceb693]"
               onClick={goToNextSlide}
             >
               <ChevronRight className="h-4 w-4" />
