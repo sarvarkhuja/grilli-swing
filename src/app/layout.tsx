@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Rosoi - Restaurant & Food Website",
+  title: "Grilli Swing - Burger Restaurant",
   description: "A delightful culinary experience with unique & special menu made by our passionate chefs",
 };
 

@@ -4,7 +4,7 @@ import { EventBooking } from "@/components/home/EventBooking";
 import { Testimonials } from "@/components/home/Testimonials";
 
 export const metadata = {
-  title: "Our Menu - Rosoi Restaurant",
+  title: "Our Menu - Grilli Swing Restaurant",
   description: "Explore our delicious menu offerings with items carefully prepared by our passionate chefs",
 };
 

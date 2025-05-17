@@ -13,48 +13,48 @@ const navLinks = [
   {
     title: "Home",
     path: "/",
-    submenu: [
+    /*submenu: [
       { title: "Home One", path: "/" },
       { title: "Home Two", path: "/home-2" },
       { title: "Home Three", path: "/home-ecommerce" },
-    ],
+    ],*/
   },
   {
     title: "Menu",
     path: "/menu",
-    submenu: [
+    /*submenu: [
       { title: "Menu One", path: "/menu" },
       { title: "Menu Two", path: "/menu-2" },
       { title: "eCommerce Menu", path: "/ecommerce-menu" },
       { title: "eCommerce Menu Two", path: "/ecommerce-menu-2" },
-    ],
+    ],*/
   },
   {
     title: "Pages",
     path: "/pages",
     submenu: [
-      { title: "About One", path: "/about" },
-      { title: "About Two", path: "/about-2" },
+      { title: "About", path: "/about" },
+      /*{ title: "About Two", path: "/about-2" },*/
       { title: "Chef", path: "/chef" },
-      { title: "Book A Table", path: "/book-a-table" },
+      /*{ title: "Book A Table", path: "/book-a-table" },*/
       { title: "Gallery", path: "/gallery" },
-      { title: "Changelog", path: "/change-log" },
-      { title: "Licenses", path: "/licenses" },
-      { title: "Style Guide", path: "/style-guide" },
+      /*{ title: "Changelog", path: "/change-log" },*/
+      /*{ title: "Licenses", path: "/licenses" },*/
+      /*{ title: "Style Guide", path: "/style-guide" },*/
     ],
   },
-  {
+  /*{
     title: "Blog",
     path: "/blog",
     submenu: [{ title: "Blog Default", path: "/blog" }],
-  },
+  },*/
   {
     title: "Contact",
     path: "/contact",
-    submenu: [
+    /*submenu: [
       { title: "Contact One", path: "/contact" },
       { title: "Contact Two", path: "/contact-2" },
-    ],
+    ],*/
   },
 ];
 
@@ -144,7 +144,7 @@ export function Header() {
     <header className="relative z-50">
       <div className="bg-[#091519] text-white flex justify-between items-center px-4 md:px-8 py-3">
         <div className="flex space-x-4">
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#ceb693]">
+          <a href="https://www.facebook.com/grilliswing/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#ceb693]">
             Facebook
           </a>
           <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#ceb693]">
@@ -152,14 +152,14 @@ export function Header() {
           </a>
         </div>
         <div>
-          <p className="text-sm">Get 35% Discount for all foods till Dec, 25</p>
+          <p className="text-sm">Book a table online and get 10% off your bill</p>
         </div>
       </div>
       <nav className="bg-[#091519] border-t border-gray-800 px-4 md:px-8 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image
-            src="https://ext.same-assets.com/1940906381/455124028.svg"
-            alt="Rosoi Restaurant"
+            src="/logo.png"
+            alt="Grilli Swing"
             width={120}
             height={40}
             className="h-auto"
