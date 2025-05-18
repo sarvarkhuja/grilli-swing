@@ -27,7 +27,7 @@ export function HeroSection() {
           <div className="max-w-xl mx-auto md:mx-0">
             <div className="mb-4">
               <span className="bg-[#ceb693] text-black text-sm px-4 py-1 rounded-full">
-                GET 35% DISCOUNT
+                GET 10% DISCOUNT
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -46,7 +46,7 @@ export function HeroSection() {
         </div>
         <div className="w-full md:w-1/2">
           <Image
-            src="/Food-2.png"
+            src="/main_dish.png"
             alt="Hero Image"
             width={200}
             height={200}
