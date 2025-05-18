@@ -8,7 +8,7 @@ import { Testimonials } from "@/components/home/Testimonials";
 import { ChefSection } from "@/components/home/ChefSection";
 
 export const metadata = {
-  title: "About Us - Rosoi Restaurant",
+  title: "About Us - Grilli Swing Restaurant",
   description: "Learn about our restaurant, our mission, and our passionate team of chefs",
 };
 
