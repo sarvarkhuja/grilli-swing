@@ -73,11 +73,11 @@ export function Footer() {
               <p>
                 <a href="mailto:info@examplesite.com" className="hover:text-[#ceb693] transition-colors">info@examplesite.com</a>
               </p>
-              <p>
+              {/*<p>
                 <a href="mailto:admin@examplesite.com" className="hover:text-[#ceb693] transition-colors">admin@examplesite.com</a>
-              </p>
+              </p>*/}
               <p>
-                <a href="tel:+12345678910" className="hover:text-[#ceb693] transition-colors">+12345 678 910</a>
+                <a href="tel:+358402587139" className="hover:text-[#ceb693] transition-colors">+358 40 2587139</a>
               </p>
             </address>
           </div>

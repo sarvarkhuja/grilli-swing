@@ -28,7 +28,7 @@ export function CuisineSection() {
               </h2>
             </div>
             <p className="text-gray-300 mb-8 max-w-lg">
-              Rosoi is one of the most popular Restaurants with unique
+              Grilli Swing is one of the most popular Restaurants with unique
               & special menu made by our passionate chefs with love and quality with can impress you
             </p>
             <div className="flex flex-col sm:flex-row gap-4">

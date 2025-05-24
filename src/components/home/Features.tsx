@@ -13,7 +13,7 @@ const FeatureCard = ({ title, description }: FeatureProps) => (
 );
 
 export function Features() {
-  const featureDescription = "Rosoi is one of the most popular Restaurant & special menu made by our passionate chefs and quality with can impress you";
+  const featureDescription = "Grilli Swing is one of the most popular Restaurant & special menu made by our passionate chefs and quality with can impress you";
 
   const features = [
     {

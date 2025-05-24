@@ -27,8 +27,8 @@ export function EventBooking() {
             </h2>
             <div className="mb-6">
               <p className="text-gray-300 mb-2">Call for Reservation</p>
-              <a href="tel:+01234567891" className="text-[#ceb693] text-xl font-semibold">
-                +01234 567 891
+              <a href="tel:+358402587139" className="text-[#ceb693] text-xl font-semibold">
+                +358 40 2587139
               </a>
             </div>
 
@@ -36,16 +36,16 @@ export function EventBooking() {
               <h3 className="text-xl font-bold mb-4">Opening Hours</h3>
               <ul className="space-y-3">
                 <li className="flex items-center justify-between text-gray-300">
-                  <span>Monday - Saturday</span>
-                  <span>7.30 am - 11.30 pm</span>
+                  <span>Monday - Friday</span>
+                  <span>10.30 am - 10.00 pm</span>
+                </li>
+                <li className="flex items-center justify-between text-gray-300">
+                  <span>Saturday</span>
+                  <span>11.00 am - 10.00 pm</span>
                 </li>
                 <li className="flex items-center justify-between text-gray-300">
                   <span>Sunday</span>
-                  <span>7.30 am - 11.30 pm</span>
-                </li>
-                <li className="flex items-center justify-between text-gray-300">
-                  <span>Happy Hour</span>
-                  <span>5.30 pm - 09.00 pm</span>
+                  <span>11.00 am - 10.00 pm</span>
                 </li>
               </ul>
             </div>

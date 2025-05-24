@@ -230,23 +230,23 @@ export const chefs: ChefProps[] = [
 export const testimonials: TestimonialProps[] = [
   {
     id: "1",
-    name: "Maichel Williamson",
-    position: "CTO, Morlex Group",
-    comment: "Rosoi is one of the most popular and tasty Restaurant with unique & special test food menu made by our passionate more an chefs with love and quality and love",
+    name: "Samuel Marchal",
+    position: "",
+    comment: "You find something different from your usual pizza/kebab fast food there. A good change with Balkan and Greek options. Portions are rather big and the food is simple but well done.",
     image: "https://cdn.prod.website-files.com/63d0c13bf294b9ad2ad7a1f0/63d9ea1356119749d7a5f5b0_author-01.png",
   },
   {
     id: "2",
-    name: "Maichel Williamson",
-    position: "CTO, Morlex Group",
-    comment: "Rosoi is one of the most popular and tasty Restaurant with unique & special test food menu made by our passionate more an chefs with love and quality and love",
+    name: "Uksi Uotinen",
+    position: "",
+    comment: "Very good service once again! You can get a tasty and big meal quickly and cheaply. Definitely the best grill place in the Oulu area! ",
     image: "https://cdn.prod.website-files.com/63d0c13bf294b9ad2ad7a1f0/63d9ea2ab1946b363a74fa93_author-02.png",
   },
   {
     id: "3",
-    name: "Caleb Burman",
-    position: "Assitant Manager",
-    comment: "Rosoi is one of the most popular and tasty Restaurant with unique & special test food menu made by our passionate more an chefs with love and quality and love",
+    name: "Henrikki Paavola",
+    position: "",
+    comment: "The most delicious grill I've ever been to! A good-sized portion and a wonderful taste!",
     image: "https://cdn.prod.website-files.com/63d0c13bf294b9ad2ad7a1f0/63d9ea2ab1946b363a74fa93_author-02.png",
   },
 ];
