@@ -49,10 +49,9 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-6">Restaurant</h3>
             <ul className="space-y-3">
-              <li><Link href="/about" className="text-gray-400 hover:text-[#ceb693] transition-colors">About</Link></li>
+              <li><Link href="/" className="text-gray-400 hover:text-[#ceb693] transition-colors">Home</Link></li>
               <li><Link href="/menu" className="text-gray-400 hover:text-[#ceb693] transition-colors">Menu</Link></li>
-              <li><Link href="/book-a-table" className="text-gray-400 hover:text-[#ceb693] transition-colors">Chef</Link></li>
-              <li><Link href="/blog" className="text-gray-400 hover:text-[#ceb693] transition-colors">Gallery</Link></li>
+              <li><Link href="/about" className="text-gray-400 hover:text-[#ceb693] transition-colors">About</Link></li>
               <li><Link href="/contact" className="text-gray-400 hover:text-[#ceb693] transition-colors">Contact</Link></li>
             </ul>
           </div>

@@ -15,14 +15,14 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
-      <PageBanner
+      {/* <PageBanner 
         title="About Us"
         breadcrumbs={[
           { name: "Home", href: "/" },
           { name: "Pages", href: "#" },
           { name: "About Us", href: "/about" },
         ]}
-      />
+      />*/}
 
       <section className="py-20 relative">
         {/* Background Image and Overlay */}
@@ -80,9 +80,9 @@ export default function AboutPage() {
       </section>
 
       <Features />
-      <ChefSection />
-      <EventBooking />
-      <Testimonials />
+      <ChefSection /> 
+      {/* <EventBooking />
+      <Testimonials />*/}
     </>
   );
 }

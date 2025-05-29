@@ -27,9 +27,9 @@ export function ChefSection() {
               Meet our Chef
             </h2>
           </div>
-          <Button asChild variant="outline" className="border-[#ceb693] text-[#ceb693] hover:bg-[#ceb693] hover:text-black">
+          {/* <Button asChild variant="outline" className="border-[#ceb693] text-[#ceb693] hover:bg-[#ceb693] hover:text-black">
             <Link href="/chef">View all</Link>
-          </Button>
+          </Button> */}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">

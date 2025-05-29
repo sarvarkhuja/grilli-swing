@@ -11,17 +11,17 @@ export const metadata = {
 export default function MenuPage() {
   return (
     <>
-      <PageBanner
+      {/* <PageBanner 
         title="Our Menu"
         breadcrumbs={[
           { name: "Home", href: "/" },
           { name: "Pages", href: "#" },
           { name: "Our Menu", href: "/menu" },
         ]}
-      />
+      />*/}
       <SpecialMenu />
-      <EventBooking />
-      <Testimonials />
+      {/* <EventBooking /> 
+      <Testimonials />*/}
     </>
   );
 }

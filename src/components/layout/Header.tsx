@@ -30,18 +30,18 @@ const navLinks = [
     ],*/
   },
   {
-    title: "Pages",
-    path: "/pages",
-    submenu: [
-      { title: "About", path: "/about" },
+    title: "About",
+    path: "/about",
+    // submenu: [
+      // { title: "About", path: "/about" },
       /*{ title: "About Two", path: "/about-2" },*/
-      { title: "Chef", path: "/chef" },
+      // { title: "Chef", path: "/chef" },
       /*{ title: "Book A Table", path: "/book-a-table" },*/
-      { title: "Gallery", path: "/gallery" },
+      // { title: "Gallery", path: "/gallery" },
       /*{ title: "Changelog", path: "/change-log" },*/
       /*{ title: "Licenses", path: "/licenses" },*/
       /*{ title: "Style Guide", path: "/style-guide" },*/
-    ],
+    // ],
   },
   /*{
     title: "Blog",
