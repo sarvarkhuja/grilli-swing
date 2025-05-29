@@ -172,7 +172,7 @@ export function Header() {
               key={index}
               title={link.title}
               path={link.path}
-              submenu={link.submenu}
+              // submenu={link.submenu}
             />
           ))}
         </div>
