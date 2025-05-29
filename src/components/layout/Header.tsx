@@ -78,7 +78,7 @@ const MobileNav = () => {
               <Link href={link.path} className="text-xl font-medium">
                 {link.title}
               </Link>
-              {link.submenu && (
+              {/* {link.submenu && (
                 <div className="ml-4 mt-2 flex flex-col gap-2">
                   {link.submenu.map((sublink, subIndex) => (
                     <Link
@@ -90,7 +90,7 @@ const MobileNav = () => {
                     </Link>
                   ))}
                 </div>
-              )}
+              )} */}
             </div>
           ))}
         </nav>
