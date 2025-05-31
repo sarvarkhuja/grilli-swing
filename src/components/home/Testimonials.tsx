@@ -67,9 +67,6 @@ export function Testimonials() {
                       <p className="text-[#ceb693] text-sm">{testimonial.position}</p>
                     </div>
                   </div>
-                  <div className="absolute right-4 top-4 text-4xl text-gray-500 opacity-30 font-serif">
-                    " "
-                  </div>
                 </div>
               ))}
           </div>

@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 const LANGUAGE_NAMES: Record<SupportedLanguage, string> = {
     en: 'English',
     fi: 'Suomeksi',
+    sv: 'Svenska',
 };
 
 export function LanguageSwitcher() {

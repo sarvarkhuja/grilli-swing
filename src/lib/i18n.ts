@@ -1,9 +1,9 @@
-export type SupportedLanguage = "en" | "fi";
+export type SupportedLanguage = "en" | "fi" | "sv";
 export type TranslationKey = string;
 export type Translations = Record<TranslationKey, string>;
 
 // Available languages
-export const SUPPORTED_LANGUAGES: SupportedLanguage[] = ["en", "fi"];
+export const SUPPORTED_LANGUAGES: SupportedLanguage[] = ["en", "fi", "sv"];
 export const DEFAULT_LANGUAGE: SupportedLanguage = "en";
 
 // Language detection utilities
