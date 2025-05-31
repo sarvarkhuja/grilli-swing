@@ -5,9 +5,11 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { testimonials } from "@/lib/data";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "@/lib/i18n-context";
 
 export function Testimonials() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const { t } = useTranslation();
 
   const goToNextSlide = () => {
     setCurrentSlide((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
@@ -22,7 +24,7 @@ export function Testimonials() {
       {/* Background Image and Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://ext.same-assets.com/1940906381/134474533.jpeg"
+          src="/3756011995.jpeg"
           alt="Testimonials Background"
           fill
           className="object-cover"
@@ -33,10 +35,10 @@ export function Testimonials() {
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         <div className="mb-12 text-center">
           <span className="inline-block text-[#ceb693] text-sm uppercase tracking-wide mb-2">
-            TESTIMONIALS
+            {t("testimonials.badge")}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold">
-            Reviews about our test
+            {t("testimonials.heading")}
           </h2>
         </div>
 

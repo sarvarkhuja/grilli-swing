@@ -10,7 +10,7 @@ export function BlogSection() {
       {/* Background Image and Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://ext.same-assets.com/1940906381/3939063708.jpeg"
+          src="/3756011995.jpeg"
           alt="Blog Background"
           fill
           className="object-cover"

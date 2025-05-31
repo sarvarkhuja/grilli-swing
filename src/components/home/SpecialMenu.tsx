@@ -5,54 +5,73 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { menuItems, MenuItemProps } from "@/lib/data";
+import { useTranslation } from "@/lib/i18n-context";
 
 interface MenuCategoryProps {
   items: MenuItemProps[];
 }
 
-const MenuCategory = ({ items }: MenuCategoryProps) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-    {items.slice(0, 5).map((item) => (
-      <div key={item.id} className="flex justify-between border-b border-gray-700 pb-3">
-        <div>
-          <div className="flex items-center gap-2 mb-1">
-            <h3 className="font-medium text-lg">{item.name}</h3>
-            {item.tags && (
-              <span className={`text-xs uppercase px-2 py-0.5 rounded-sm ${
-                item.tags === 'recommended' ? 'bg-[#ceb693] text-black' :
-                item.tags === 'chef choice' ? 'bg-[#9e3f1a] text-white' :
-                item.tags === 'seasonal' ? 'bg-[#649a66] text-white' :
-                'bg-[#4c5f6e] text-white'
-              }`}>
-                {item.tags}
-              </span>
-            )}
+const MenuCategory = ({ items }: MenuCategoryProps) => {
+  const { t } = useTranslation();
+
+  const getTagTranslation = (tag: string) => {
+    switch (tag) {
+      case 'recommended':
+        return t("menu.tags.recommended");
+      case 'chef choice':
+        return t("menu.tags.chefChoice");
+      case 'seasonal':
+        return t("menu.tags.seasonal");
+      default:
+        return tag;
+    }
+  };
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {items.slice(0, 5).map((item) => (
+        <div key={item.id} className="flex justify-between border-b border-gray-700 pb-3">
+          <div>
+            <div className="flex items-center gap-2 mb-1">
+              <h3 className="font-medium text-lg">{item.name}</h3>
+              {item.tags && (
+                <span className={`text-xs uppercase px-2 py-0.5 rounded-sm ${item.tags === 'recommended' ? 'bg-[#ceb693] text-black' :
+                  item.tags === 'chef choice' ? 'bg-[#9e3f1a] text-white' :
+                    item.tags === 'seasonal' ? 'bg-[#649a66] text-white' :
+                      'bg-[#4c5f6e] text-white'
+                  }`}>
+                  {getTagTranslation(item.tags)}
+                </span>
+              )}
+            </div>
+            <p className="text-gray-400 text-sm">{item.description}</p>
           </div>
-          <p className="text-gray-400 text-sm">{item.description}</p>
+          <div className="text-[#ceb693] font-medium">{item.price}</div>
         </div>
-        <div className="text-[#ceb693] font-medium">{item.price}</div>
-      </div>
-    ))}
-  </div>
-);
+      ))}
+    </div>
+  );
+};
 
 export function SpecialMenu() {
+  const { t } = useTranslation();
+
   return (
     <section className="py-20 relative">
       <div
         className="absolute inset-0 z-0 bg-cover bg-center opacity-10"
         style={{
-          backgroundImage: "url('https://ext.same-assets.com/1940906381/2803412184.jpeg')",
+          backgroundImage: "url('/2803412184.jpeg')",
         }}
       />
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         <div className="text-center mb-12">
           <span className="inline-block text-[#ceb693] text-sm uppercase tracking-wide mb-2">
-            TEST A LITTLE BIT
+            {t("menu.badge")}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold">
-            Our Special Menu
+            {t("menu.heading")}
           </h2>
         </div>
 
@@ -62,25 +81,25 @@ export function SpecialMenu() {
               value="breakfast"
               className="px-6 py-2 data-[state=active]:bg-transparent data-[state=active]:text-[#ceb693] data-[state=active]:border-b-2 data-[state=active]:border-[#ceb693] rounded-none text-white"
             >
-              Breakfast
+              {t("menu.breakfast")}
             </TabsTrigger>
             <TabsTrigger
               value="brunch"
               className="px-6 py-2 data-[state=active]:bg-transparent data-[state=active]:text-[#ceb693] data-[state=active]:border-b-2 data-[state=active]:border-[#ceb693] rounded-none text-white"
             >
-              Brunch
+              {t("menu.brunch")}
             </TabsTrigger>
             <TabsTrigger
               value="lunch"
               className="px-6 py-2 data-[state=active]:bg-transparent data-[state=active]:text-[#ceb693] data-[state=active]:border-b-2 data-[state=active]:border-[#ceb693] rounded-none text-white"
             >
-              Lunch
+              {t("menu.lunch")}
             </TabsTrigger>
             <TabsTrigger
               value="dinner"
               className="px-6 py-2 data-[state=active]:bg-transparent data-[state=active]:text-[#ceb693] data-[state=active]:border-b-2 data-[state=active]:border-[#ceb693] rounded-none text-white"
             >
-              Dinner
+              {t("menu.dinner")}
             </TabsTrigger>
           </TabsList>
 
@@ -107,7 +126,7 @@ export function SpecialMenu() {
             className="flex items-center space-x-2 text-[#ceb693] hover:text-[#d6c4a7] transition-colors"
           >
             <ArrowRight size={20} />
-            <span>View Full Menu</span>
+            <span>{t("menu.viewFullMenu")}</span>
           </Link>
         </div>
       </div>

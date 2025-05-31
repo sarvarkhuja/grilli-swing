@@ -28,7 +28,7 @@ export default function AboutPage() {
         {/* Background Image and Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://ext.same-assets.com/1940906381/3756011995.jpeg"
+            src="/3756011995.jpeg"
             alt="About Background"
             fill
             className="object-cover"
@@ -67,7 +67,7 @@ export default function AboutPage() {
             <div className="w-full md:w-1/2">
               <div className="relative mx-auto w-full max-w-md">
                 <Image
-                  src="https://ext.same-assets.com/1940906381/2803412184.jpeg"
+                  src="/2803412184.jpeg"
                   alt="Chef Image"
                   width={500}
                   height={500}
@@ -80,7 +80,7 @@ export default function AboutPage() {
       </section>
 
       <Features />
-      <ChefSection /> 
+      <ChefSection />
       {/* <EventBooking />
       <Testimonials />*/}
     </>

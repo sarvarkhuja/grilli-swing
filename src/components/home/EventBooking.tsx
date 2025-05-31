@@ -1,8 +1,12 @@
+"use client"
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "@/lib/i18n-context";
 
 export function EventBooking() {
+  const { t } = useTranslation();
+
   return (
     <section className="py-20 relative overflow-hidden">
       {/* Background Image and Overlay */}
@@ -20,38 +24,38 @@ export function EventBooking() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div>
             <span className="inline-block text-[#ceb693] text-sm uppercase tracking-wide mb-2">
-              EVENT BOOKING
+              {t("events.badge")}
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Do you have any plan<br />for any Party or Events?
+              {t("events.heading")}
             </h2>
             <div className="mb-6">
-              <p className="text-gray-300 mb-2">Call for Reservation</p>
+              <p className="text-gray-300 mb-2">{t("events.callReservation")}</p>
               <a href="tel:+358402587139" className="text-[#ceb693] text-xl font-semibold">
                 +358 40 2587139
               </a>
             </div>
 
             <div className="bg-[#091519]/80 p-6 rounded-md mb-8">
-              <h3 className="text-xl font-bold mb-4">Opening Hours</h3>
+              <h3 className="text-xl font-bold mb-4">{t("events.openingHours")}</h3>
               <ul className="space-y-3">
                 <li className="flex items-center justify-between text-gray-300">
-                  <span>Monday - Friday</span>
+                  <span>{t("events.mondayFriday")}</span>
                   <span>10.30 am - 10.00 pm</span>
                 </li>
                 <li className="flex items-center justify-between text-gray-300">
-                  <span>Saturday</span>
+                  <span>{t("events.saturday")}</span>
                   <span>11.00 am - 10.00 pm</span>
                 </li>
                 <li className="flex items-center justify-between text-gray-300">
-                  <span>Sunday</span>
+                  <span>{t("events.sunday")}</span>
                   <span>11.00 am - 10.00 pm</span>
                 </li>
               </ul>
             </div>
 
             <Button asChild className="bg-[#ceb693] hover:bg-[#d6c4a7] text-black px-8 py-6 text-lg rounded-md">
-              <Link href="/book-a-table">Book Early</Link>
+              <Link href="/book-a-table">{t("events.bookEarly")}</Link>
             </Button>
           </div>
 

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { useTranslation } from "@/lib/i18n-context";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -15,6 +16,8 @@ export default function ContactPage() {
     subject: "",
     message: "",
   });
+
+  const { t } = useTranslation();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -25,7 +28,7 @@ export default function ContactPage() {
     e.preventDefault();
     // Form submission logic would go here
     console.log(formData);
-    alert("Message sent successfully!");
+    alert(t("contact.messageSent"));
     setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
@@ -47,7 +50,7 @@ export default function ContactPage() {
               <div className="w-14 h-14 bg-[#ceb693] rounded-full flex items-center justify-center mb-4">
                 <Phone className="text-black" size={24} />
               </div>
-              <h3 className="text-xl font-bold mb-2">Phone Number</h3>
+              <h3 className="text-xl font-bold mb-2">{t("contact.phoneNumber")}</h3>
               <p className="text-gray-400 mb-2">+358 40 258 7139</p>
             </div>
 
@@ -55,7 +58,7 @@ export default function ContactPage() {
               <div className="w-14 h-14 bg-[#ceb693] rounded-full flex items-center justify-center mb-4">
                 <Mail className="text-black" size={24} />
               </div>
-              <h3 className="text-xl font-bold mb-2">Email</h3>
+              <h3 className="text-xl font-bold mb-2">{t("contact.email")}</h3>
               <p className="text-gray-400 mb-2">info@examplesite.com</p>
             </div>
 
@@ -63,7 +66,7 @@ export default function ContactPage() {
               <div className="w-14 h-14 bg-[#ceb693] rounded-full flex items-center justify-center mb-4">
                 <MapPin className="text-black" size={24} />
               </div>
-              <h3 className="text-xl font-bold mb-2">Address</h3>
+              <h3 className="text-xl font-bold mb-2">{t("contact.address")}</h3>
               <p className="text-gray-400">Valtatie 21, Oulu, Finland</p>
             </div>
           </div>
@@ -72,39 +75,39 @@ export default function ContactPage() {
           <div className="mt-16 max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <span className="inline-block text-[#ceb693] text-sm uppercase tracking-wide mb-2">
-                GET IN TOUCH
+                {t("contact.badge")}
               </span>
               <h2 className="text-3xl md:text-4xl font-bold">
-                Send Us A Message
+                {t("contact.heading")}
               </h2>
               <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
-                If you have any questions about our menu, reservation, or anything else, please feel free to contact us.
+                {t("contact.description")}
               </p>
             </div>
 
             <form onSubmit={handleSubmit} className="bg-[#091519] p-8 rounded-lg">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <Label htmlFor="name" className="text-white mb-2 block">Full Name</Label>
+                  <Label htmlFor="name" className="text-white mb-2 block">{t("contact.fullName")}</Label>
                   <Input
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Your Name"
+                    placeholder={t("contact.placeholderName")}
                     required
                     className="bg-[#111e24] border-gray-700 text-white"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="email" className="text-white mb-2 block">Email Address</Label>
+                  <Label htmlFor="email" className="text-white mb-2 block">{t("contact.emailAddress")}</Label>
                   <Input
                     id="email"
                     name="email"
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="Your Email"
+                    placeholder={t("contact.placeholderEmail")}
                     required
                     className="bg-[#111e24] border-gray-700 text-white"
                   />
@@ -112,26 +115,26 @@ export default function ContactPage() {
               </div>
 
               <div className="mb-6">
-                <Label htmlFor="subject" className="text-white mb-2 block">Subject</Label>
+                <Label htmlFor="subject" className="text-white mb-2 block">{t("contact.subject")}</Label>
                 <Input
                   id="subject"
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  placeholder="Your Subject"
+                  placeholder={t("contact.placeholderSubject")}
                   required
                   className="bg-[#111e24] border-gray-700 text-white"
                 />
               </div>
 
               <div className="mb-8">
-                <Label htmlFor="message" className="text-white mb-2 block">Message</Label>
+                <Label htmlFor="message" className="text-white mb-2 block">{t("contact.message")}</Label>
                 <Textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Your Message"
+                  placeholder={t("contact.placeholderMessage")}
                   required
                   className="bg-[#111e24] border-gray-700 text-white min-h-[150px]"
                 />
@@ -139,7 +142,7 @@ export default function ContactPage() {
 
               <Button type="submit" className="bg-[#ceb693] hover:bg-[#d6c4a7] text-black w-full py-6 flex items-center justify-center gap-2">
                 <Send size={18} />
-                <span>Send Message</span>
+                <span>{t("contact.sendMessage")}</span>
               </Button>
             </form>
           </div>

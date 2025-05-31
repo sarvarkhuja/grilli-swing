@@ -5,14 +5,17 @@ import Image from "next/image";
 import { Facebook, Twitter, Instagram, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useTranslation } from "@/lib/i18n-context";
 
 export function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-[#091519] text-white relative">
       <div
         className="absolute inset-0 z-0 bg-cover bg-center opacity-20"
         style={{
-          backgroundImage: "url('https://ext.same-assets.com/1940906381/615314002.jpeg')",
+          backgroundImage: "url('/615314002.jpeg')",
         }}
       />
 
@@ -31,15 +34,15 @@ export function Footer() {
               />
             </Link>
             <p className="text-gray-400 mb-6">
-              Grilli Swing is one of the most popular Restaurant & special menu made by our passionate chefs
+              {t("footer.description")}
             </p>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/grilliswing/" target="_blank" rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-[#111e24] flex items-center justify-center hover:bg-[#ceb693] transition-colors">
+                className="w-10 h-10 rounded-full bg-[#111e24] flex items-center justify-center hover:bg-[#ceb693] transition-colors">
                 <Facebook size={18} />
               </a>
               <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-[#111e24] flex items-center justify-center hover:bg-[#ceb693] transition-colors">
+                className="w-10 h-10 rounded-full bg-[#111e24] flex items-center justify-center hover:bg-[#ceb693] transition-colors">
                 <Instagram size={18} />
               </a>
             </div>
@@ -47,26 +50,26 @@ export function Footer() {
 
           {/* Restaurant Links */}
           <div>
-            <h3 className="text-xl font-bold mb-6">Restaurant</h3>
+            <h3 className="text-xl font-bold mb-6">{t("footer.restaurant")}</h3>
             <ul className="space-y-3">
-              <li><Link href="/" className="text-gray-400 hover:text-[#ceb693] transition-colors">Home</Link></li>
-              <li><Link href="/menu" className="text-gray-400 hover:text-[#ceb693] transition-colors">Menu</Link></li>
-              <li><Link href="/about" className="text-gray-400 hover:text-[#ceb693] transition-colors">About</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-[#ceb693] transition-colors">Contact</Link></li>
+              <li><Link href="/" className="text-gray-400 hover:text-[#ceb693] transition-colors">{t("nav.home")}</Link></li>
+              <li><Link href="/menu" className="text-gray-400 hover:text-[#ceb693] transition-colors">{t("nav.menu")}</Link></li>
+              <li><Link href="/about" className="text-gray-400 hover:text-[#ceb693] transition-colors">{t("nav.about")}</Link></li>
+              <li><Link href="/contact" className="text-gray-400 hover:text-[#ceb693] transition-colors">{t("nav.contact")}</Link></li>
             </ul>
           </div>
 
           {/* Information Links */}
           <div>
-            <h3 className="text-xl font-bold mb-6">Information</h3>
+            <h3 className="text-xl font-bold mb-6">{t("footer.information")}</h3>
             <ul className="space-y-3">
-              <li><Link href="/about" className="text-gray-400 hover:text-[#ceb693] transition-colors">Terms & Conditions</Link></li>
+              <li><Link href="/about" className="text-gray-400 hover:text-[#ceb693] transition-colors">{t("footer.termsConditions")}</Link></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-bold mb-6">Contact info</h3>
+            <h3 className="text-xl font-bold mb-6">{t("footer.contactInfo")}</h3>
             <address className="not-italic text-gray-400 space-y-3">
               <p>Valtatie 21<br /> Oulu, Finland, 90570</p>
               <p>
@@ -86,7 +89,7 @@ export function Footer() {
       {/* Copyright */}
       <div className="relative z-10 border-t border-gray-800 py-6">
         <div className="container mx-auto px-4 md:px-8 text-center text-gray-400 text-sm">
-          <a href="https://webflow.com/templates/designers/brandbes" className="text-[#ceb693]">Grilli Swing.</a> All Rights Reserved - Privacy Policy
+          <a href="https://webflow.com/templates/designers/brandbes" className="text-[#ceb693]">Grilli Swing.</a> {t("footer.allRightsReserved")}
         </div>
       </div>
     </footer>

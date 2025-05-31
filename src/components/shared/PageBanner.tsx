@@ -13,7 +13,7 @@ interface PageBannerProps {
 export function PageBanner({
   title,
   breadcrumbs = [],
-  backgroundImage = "https://ext.same-assets.com/1940906381/32376973.jpeg"
+  backgroundImage = "/32376973.jpeg"
 }: PageBannerProps) {
   return (
     <section className="relative py-20 overflow-hidden">
