@@ -151,10 +151,13 @@ export default function ContactPage() {
 
       {/* Map */}
       <div className="h-[400px] bg-[#091519] flex items-center justify-center">
-        <div className="text-center">
-          {/* <p className="text-gray-400 mb-2">Map would be integrated here</p>
-          <p className="text-lg font-medium">245 D, South City, Mixed Tower Main town, New York, USA</p> */}
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4241.773773968285!2d25.45876877767606!3d65.02761254261553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46802d5e3fd6c0b5%3A0x3259a9cfbdaba1e7!2sGrill%20Swing!5e1!3m2!1sen!2sfi!4v1748524231318!5m2!1sen!2sfi" width="600" height="450" loading="lazy"></iframe>
+        <div className="mt-16 max-w-4xl w-full h-full mx-auto">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4241.773773968285!2d25.45876877767606!3d65.02761254261553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46802d5e3fd6c0b5%3A0x3259a9cfbdaba1e7!2sGrill%20Swing!5e1!3m2!1sen!2sfi!4v1748524231318!5m2!1sen!2sfi"
+            className="w-full h-full"
+            loading="lazy"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
     </>
