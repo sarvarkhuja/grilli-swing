@@ -24,8 +24,7 @@ export default function AboutPage() {
         ]}
       />*/}
 
-      <section className="py-20 relative">
-        {/* Background Image and Overlay */}
+      {/* <section className="py-20 relative">
         <div className="absolute inset-0 z-0">
           <Image
             src="/3756011995.jpeg"
@@ -77,7 +76,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Features />
       <ChefSection />

@@ -36,7 +36,7 @@ export function Footer() {
             <p className="text-gray-400 mb-6">
               {t("footer.description")}
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <a href="https://www.facebook.com/grilliswing/" target="_blank" rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-[#111e24] flex items-center justify-center hover:bg-[#ceb693] transition-colors">
                 <Facebook size={18} />
@@ -45,7 +45,7 @@ export function Footer() {
                 className="w-10 h-10 rounded-full bg-[#111e24] flex items-center justify-center hover:bg-[#ceb693] transition-colors">
                 <Instagram size={18} />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Restaurant Links */}
@@ -63,7 +63,8 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-6">{t("footer.information")}</h3>
             <ul className="space-y-3">
-              <li><Link href="/about" className="text-gray-400 hover:text-[#ceb693] transition-colors">{t("footer.termsConditions")}</Link></li>
+              <li><Link href="https://www.facebook.com/grilliswing/" className="text-gray-400 hover:text-[#ceb693] transition-colors">Facebook</Link></li>
+              <li><Link href="https://www.instagram.com/" className="text-gray-400 hover:text-[#ceb693] transition-colors">Instagram</Link></li>
             </ul>
           </div>
 
