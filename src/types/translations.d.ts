@@ -24,6 +24,6 @@ export type TranslationKey = keyof TranslationKeys;
 // Extend the global namespace for better IDE support
 declare global {
   namespace I18n {
-    interface TranslationKeys extends TranslationKeys {}
+    type TranslationKeys = TranslationKeys
   }
 }

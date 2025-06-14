@@ -78,7 +78,7 @@ export function I18nProvider({
                 loadLanguageTranslations(language);
             }
         }
-    }, []); // Empty dependency array - only run once on mount
+    }, [language, loadLanguageTranslations, setLanguage, translations]); // Include all dependencies to avoid stale closures
 
     // Listen for URL changes (query param changes)
     useEffect(() => {

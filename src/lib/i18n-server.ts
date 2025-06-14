@@ -1,11 +1,11 @@
-import { headers, cookies } from 'next/headers';
+import { headers, cookies } from "next/headers";
 import {
 	SupportedLanguage,
 	DEFAULT_LANGUAGE,
 	detectLanguageFromQuery,
 	loadTranslations,
 	createTranslationFunction,
-	SUPPORTED_LANGUAGES
+	SUPPORTED_LANGUAGES,
 } from "./i18n";
 
 /**
@@ -14,7 +14,7 @@ import {
 export async function detectLanguageFromServerCookie(): Promise<SupportedLanguage | null> {
 	try {
 		const cookieStore = cookies();
-		const cookieLang = cookieStore.get('i18n-lang')?.value;
+		const cookieLang = (await cookieStore).get("i18n-lang")?.value;
 		return SUPPORTED_LANGUAGES.includes(cookieLang as SupportedLanguage)
 			? (cookieLang as SupportedLanguage)
 			: null;
@@ -26,7 +26,9 @@ export async function detectLanguageFromServerCookie(): Promise<SupportedLanguag
 /**
  * Server-side language detection with priority: query param > cookie > default
  */
-export async function detectServerLanguage(searchParams?: URLSearchParams): Promise<SupportedLanguage> {
+export async function detectServerLanguage(
+	searchParams?: URLSearchParams
+): Promise<SupportedLanguage> {
 	// 1. Check query parameter
 	if (searchParams) {
 		const queryLang = detectLanguageFromQuery(searchParams);
@@ -102,7 +104,7 @@ export async function getServerI18n(searchParams?: {
  */
 export async function getAcceptLanguageHeader(): Promise<string | null> {
 	try {
-		const headersList = headers();
+		const headersList = await headers();
 		return headersList.get("accept-language");
 	} catch {
 		return null;
