@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -13,6 +13,10 @@ interface MenuCategoryProps {
 
 const MenuCategory = ({ items }: MenuCategoryProps) => {
   const { t } = useTranslation();
+  const pathname = usePathname();
+
+  const isOnMenuPage = pathname === "/menu";
+  const visibleItems = isOnMenuPage ? items : items.slice(0, 4);
 
   const getTagTranslation = (tag: string) => {
     switch (tag) {
@@ -29,24 +33,31 @@ const MenuCategory = ({ items }: MenuCategoryProps) => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {items.slice(0, 5).map((item) => (
-        <div key={item.id} className="flex justify-between border-b border-gray-700 pb-3">
-          <div>
+      {visibleItems.map((item) => (
+        <div key={item.id} className="flex flex-col md:flex-row items-start border-b border-gray-700 pb-6 gap-4">
+          <img 
+            src={item.image} 
+            alt={item.name} 
+            className="w-full md:w-48 h-48 object-cover rounded-lg" 
+          />
+
+          <div className="flex-1">
             <div className="flex items-center gap-2 mb-1">
-              <h3 className="font-medium text-lg">{item.name}</h3>
+              <h3 className="font-medium text-xl">{item.name}</h3>
               {item.tags && (
-                <span className={`text-xs uppercase px-2 py-0.5 rounded-sm ${item.tags === 'recommended' ? 'bg-[#ceb693] text-black' :
+                <span className={`text-xs uppercase px-2 py-0.5 rounded-sm ${
+                  item.tags === 'recommended' ? 'bg-[#ceb693] text-black' :
                   item.tags === 'chef choice' ? 'bg-[#9e3f1a] text-white' :
-                    item.tags === 'seasonal' ? 'bg-[#649a66] text-white' :
-                      'bg-[#4c5f6e] text-white'
-                  }`}>
+                  item.tags === 'seasonal' ? 'bg-[#649a66] text-white' :
+                  'bg-[#4c5f6e] text-white'
+                }`}>
                   {getTagTranslation(item.tags)}
                 </span>
               )}
             </div>
-            <p className="text-gray-400 text-sm">{item.description}</p>
+            <p className="text-gray-400 text-sm mb-2">{item.description}</p>
+            <div className="text-[#ceb693] font-semibold text-base">{item.price}</div>
           </div>
-          <div className="text-[#ceb693] font-medium">{item.price}</div>
         </div>
       ))}
     </div>
@@ -55,6 +66,8 @@ const MenuCategory = ({ items }: MenuCategoryProps) => {
 
 export function SpecialMenu() {
   const { t } = useTranslation();
+  const pathname = usePathname();
+  const isOnMenuPage = pathname === "/menu";
 
   return (
     <section className="py-20 relative">
@@ -120,15 +133,17 @@ export function SpecialMenu() {
           </TabsContent>
         </Tabs>
 
-        <div className="flex justify-center mt-10">
-          <Link
-            href="/menu"
-            className="flex items-center space-x-2 text-[#ceb693] hover:text-[#d6c4a7] transition-colors"
-          >
-            <ArrowRight size={20} />
-            <span>{t("menu.viewFullMenu")}</span>
-          </Link>
-        </div>
+        {!isOnMenuPage && (
+          <div className="flex justify-center mt-10">
+            <Link
+              href="/menu"
+              className="flex items-center space-x-2 text-[#ceb693] hover:text-[#d6c4a7] transition-colors"
+            >
+              <ArrowRight size={20} />
+              <span>{t("menu.viewFullMenu")}</span>
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

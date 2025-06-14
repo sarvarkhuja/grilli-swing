@@ -42,6 +42,7 @@ export const menuItems: MenuItemProps[] = [
 		price: "$27.85",
 		category: "breakfast",
 		tags: "recommended",
+		image: "/Food-1.png",
 	},
 	{
 		id: "2",
@@ -49,6 +50,7 @@ export const menuItems: MenuItemProps[] = [
 		description: "Kiwee, Baby Corn, Blue berry",
 		price: "$27.85",
 		category: "breakfast",
+		image: "/Food-1.png",
 	},
 	{
 		id: "3",
@@ -56,6 +58,7 @@ export const menuItems: MenuItemProps[] = [
 		description: "Soft and juice, with garlic & ginger",
 		price: "$18.10",
 		category: "breakfast",
+		image: "/Food-1.png",
 	},
 	{
 		id: "4",
@@ -64,6 +67,7 @@ export const menuItems: MenuItemProps[] = [
 		price: "$27.85",
 		category: "breakfast",
 		tags: "chef choice",
+		image: "/Food-1.png",
 	},
 	{
 		id: "5",
@@ -71,6 +75,7 @@ export const menuItems: MenuItemProps[] = [
 		description: "Ricotta, radicchio, prosciutto salad, cabernet.",
 		price: "$12.85",
 		category: "breakfast",
+		image: "/Food-1.png",
 	},
 	{
 		id: "6",
@@ -78,6 +83,7 @@ export const menuItems: MenuItemProps[] = [
 		description: "Soft and juice, with garlic & ginger",
 		price: "$27.85",
 		category: "breakfast",
+		image: "/Food-1.png",
 	},
 	{
 		id: "7",
@@ -85,6 +91,7 @@ export const menuItems: MenuItemProps[] = [
 		description: "Smoked canadian bacon, Hollandaise sauce, Muffin",
 		price: "$27.85",
 		category: "breakfast",
+		image: "/Food-1.png",
 	},
 	{
 		id: "8",
@@ -93,6 +100,7 @@ export const menuItems: MenuItemProps[] = [
 		price: "$27.85",
 		category: "breakfast",
 		tags: "bogo offer",
+		image: "/Food-1.png",
 	},
 	{
 		id: "9",
@@ -101,6 +109,7 @@ export const menuItems: MenuItemProps[] = [
 		price: "$20.00",
 		category: "breakfast",
 		tags: "seasonal",
+		image: "/Food-1.png",
 	},
 	{
 		id: "10",
@@ -109,6 +118,7 @@ export const menuItems: MenuItemProps[] = [
 		price: "$27.85",
 		category: "breakfast",
 		tags: "recommended",
+		image: "/Food-1.png",
 	},
 	// Brunch items
 	{
@@ -118,6 +128,7 @@ export const menuItems: MenuItemProps[] = [
 		price: "$27.85",
 		category: "brunch",
 		tags: "recommended",
+		image: "/Food-1.png",
 	},
 	{
 		id: "12",
@@ -125,6 +136,7 @@ export const menuItems: MenuItemProps[] = [
 		description: "Soft and juice, with garlic & ginger",
 		price: "$18.10",
 		category: "brunch",
+		image: "/Food-1.png",
 	},
 	{
 		id: "13",
@@ -132,6 +144,7 @@ export const menuItems: MenuItemProps[] = [
 		description: "Ricotta, radicchio, prosciutto salad, cabernet.",
 		price: "$12.85",
 		category: "brunch",
+		image: "/Food-1.png",
 	},
 	{
 		id: "14",
@@ -139,6 +152,7 @@ export const menuItems: MenuItemProps[] = [
 		description: "Soft and juice, with garlic & ginger",
 		price: "$27.85",
 		category: "brunch",
+		image: "/Food-1.png",
 	},
 	{
 		id: "15",
@@ -147,6 +161,7 @@ export const menuItems: MenuItemProps[] = [
 		price: "$20.00",
 		category: "brunch",
 		tags: "seasonal",
+		image: "/Food-1.png",
 	},
 	// Lunch items
 	{
@@ -156,6 +171,7 @@ export const menuItems: MenuItemProps[] = [
 		price: "$27.85",
 		category: "lunch",
 		tags: "recommended",
+		image: "/Food-1.png",
 	},
 	{
 		id: "17",
@@ -163,6 +179,7 @@ export const menuItems: MenuItemProps[] = [
 		description: "Kiwee, Baby Corn, Blue berry",
 		price: "$18.10",
 		category: "lunch",
+		image: "/Food-1.png",
 	},
 	{
 		id: "18",
@@ -170,6 +187,7 @@ export const menuItems: MenuItemProps[] = [
 		description: "Ricotta, radicchio, prosciutto salad, cabernet.",
 		price: "$12.85",
 		category: "lunch",
+		image: "/Food-1.png",
 	},
 	// Dinner items
 	{
@@ -178,6 +196,7 @@ export const menuItems: MenuItemProps[] = [
 		description: "Atlantic cod fillet, chips, salad, tartare, lemon",
 		price: "$27.85",
 		category: "dinner",
+		image: "/Food-1.png",
 	},
 	{
 		id: "20",
@@ -185,6 +204,7 @@ export const menuItems: MenuItemProps[] = [
 		description: "Soft and juice, with garlic & ginger",
 		price: "$18.10",
 		category: "dinner",
+		image: "/Food-1.png",
 	},
 	{
 		id: "21",
@@ -193,6 +213,7 @@ export const menuItems: MenuItemProps[] = [
 		price: "$12.85",
 		category: "dinner",
 		tags: "recommended",
+		image: "/Food-1.png",
 	},
 ];
 
