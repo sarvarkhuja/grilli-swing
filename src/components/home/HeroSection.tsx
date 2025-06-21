@@ -66,7 +66,7 @@ export function HeroSection() {
 
       {rootElement && (
         <PopupModal
-          url="https://calendly.com/sarvarmuradwork/reserve-a-table-1"
+          url="https://calendly.com/khnodira14/grilli-swing"
           onModalClose={() => setIsOpen(false)}
           open={isOpen}
           rootElement={rootElement}

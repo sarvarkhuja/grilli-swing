@@ -54,9 +54,9 @@ export function EventBooking() {
               </ul>
             </div>
 
-            <Button asChild className="bg-[#ceb693] hover:bg-[#d6c4a7] text-black px-8 py-6 text-lg rounded-md">
+            {/* <Button asChild className="bg-[#ceb693] hover:bg-[#d6c4a7] text-black px-8 py-6 text-lg rounded-md">
               <Link href="/book-a-table">{t("events.bookEarly")}</Link>
-            </Button>
+            </Button> */}
           </div>
 
           <div className="hidden md:block">
